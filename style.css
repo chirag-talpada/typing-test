@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111111;
+    position: relative;
+}
+
+.glow {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    /* animation: glow 1s ease-in-out infinite alternate; */
+}
+
+
+
+/* @-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #0d76d8, 0 0 30px #0fb5f7, 0 0 40px #0764f0, 0 0 50px #007fe6, 0 0 60px #00cbe6;
+    }
+
+    to {
+        text-shadow: 0 0 10px #fff, 0 0 20px #ff4da6, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6;
+    }
+} */
+
+.typingContainer {
+    padding: 15px;
+    border-radius: 10px;
+    background: #1c1c1c;
+    text-align: center;
+}
+
+.typingContent {
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #007ebe;
+    color: gray;
+    width: 500px;
+    text-align: justify;
+    line-height: 25px;
+}
+
+.correct{
+    color: #fff;
+
+}
+
+.incorrect{
+    color: red;
+
+}
+
+#txt{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    outline: none;
+    background: none;
+    color: transparent;
+    width: 0%;
+}
+
+.chars{
+    padding: 0.2px;
+}
+
+.timer{
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.displayReportDiv{
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    min-width: 550px;
+    min-height: 500px;
+    z-index: 5;
+    top:6%;
+    animation: pop 0.3s ease-in-out 1;
+    display: none;
+}
+
+
+
+@keyframes pop {
+    0%{  
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+    
+}
+
+
+.displayReportDiv h2{
+    border-bottom: 2px solid #3d98c3;
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 7px;
+    padding: 20px 0px;
+    padding-left: 10px;
+    background: linear-gradient(-274deg, #a4dce9, transparent,#A4DCEA);
+}
+
+.displayReportDiv .content{
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.content-data{
+    font-weight: 500;
+    line-height: 30px;
+}
+
+
+.rbtn{
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: green;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.restartBtnDiv{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.ricon{
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 592px) {
+    .typingContent{
+        width: 312px;
+    }
+    .glow{
+        font-size: 31px;
+    }
+
+    .displayReportDiv{
+        min-width: 80vw;
+    }
+
+    .displayReportDiv h2{
+        padding-left: 0;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .typingContent{
+        width: 252px;
+    }
+    .glow{
+        font-size: 31px;
+    }
+}
